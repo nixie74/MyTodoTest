@@ -1,13 +1,20 @@
-h1{
-  font-family:"Verdana";
+h1, h2, h3, h4, h5, h6{
+	font-family:"Verdana";
 }
 
 p{
 	font-family: sans-serif;
 }
 
+
 #maintitle{
-  text-align: center;
+	text-align: center;
+}
+
+#taskInput{
+	padding: 2em;
+	background-color: #E6F5FF;
+	border-bottom: 3px solid #AAD;
 }
 
 #warn{
@@ -15,3 +22,10 @@ p{
 	background-color: #F0F5F5;
 	visibility: hidden;
 }
+
+#taskList{
+	padding: 2em;
+	background-color: #FFECE6;
+	border-bottom: 3px solid #DAA;
+}
+
