@@ -8,10 +8,27 @@
 
 <body>
   <div id="maintitle"><h1>mytodo</h1></div>
-  <p>Not much to do here... yet</p>
   
+  <form id="taskInput">
+  Task:
+  <input type="text" name="task"></input><br></br>
+  Due: 
+  <input type="date" name="dueDate"></input>
+  <input type="time" name="dueTime"></input><br></br>
+  
+  <input type="button" value="Add task" onclick="addNewTask()"></input>
+  </form>
+  <p>The button, it does nothing!</p>
+  
+  <h3>List of tasks:</h3>
+  <p id="taskList"></p>
+  
+  <script type="text/javascript" src="scripts.js"></script>
+  
+  <!-- jquery stuff; not being used yet
   <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="jqueryCode.js"></script>
+  -->
 </body>
 
 </html>
