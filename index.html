@@ -10,15 +10,15 @@
   <div id="maintitle"><h1>mytodo</h1></div>
   
   <form id="taskInput">
-  Task:
+  <p><b>Task:</b></p>
   <input type="text" name="task"></input><br></br>
-  Due: 
+  <p><b>Due:</b></p> 
   <input type="date" name="dueDate"></input>
   <input type="time" name="dueTime"></input><br></br>
   
   <input type="button" value="Add task" onclick="addNewTask()"></input>
   </form>
-  <p>The button, it does nothing!</p>
+  <p id="warn">No task specified</p>
   
   <h3>List of tasks:</h3>
   <p id="taskList"></p>

@@ -2,6 +2,16 @@ h1{
   font-family:"Verdana";
 }
 
+p{
+	font-family: sans-serif;
+}
+
 #maintitle{
   text-align: center;
+}
+
+#warn{
+	color: red;
+	background-color: #F0F5F5;
+	visibility: hidden;
 }
