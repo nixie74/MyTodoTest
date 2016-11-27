@@ -19,12 +19,14 @@ p{
 	width: 1.2em;
 	height: 1.2em;
 }
+
 .deleteButton:hover{
 	color: #333;
 	font-weight: bold;
 	background-color: #CCC;
 	cursor: pointer;
 }
+
 
 #maintitle{
 	text-align: center;
