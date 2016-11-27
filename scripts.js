@@ -1,22 +1,22 @@
 $(document).ready(function(){
-  var taskList = [];
+  var numTasks = 0;
+  var numTasksCreated = 0;
   $("#addTask").click(function(){
 		var newTask = getNewTask();
-    if (addTaskToList(newTask, taskList.length)){
-      taskList.push(newTask);
+    if (addTaskToList(newTask, numTasksCreated)){
+      numTasks++;
+      numTasksCreated++;
     }
-	  document.getElementById("numTasks").innerHTML = taskList.length;
+	  document.getElementById("numTasks").innerHTML = numTasks;
   })
 
   $(document).on("click", ".deleteButton", function(){
       if (confirm("Do you really wish to delete this task?")){
-        var parentIDNum = $(this).parent().attr('id').substring(4);
-        var taskIdx = parseInt(parentIDNum);
-        taskList.splice(taskIdx, 1);
         $(this).parent().fadeOut(500, function(){
           $(this).delay(500).remove();
-          document.getElementById("numTasks").innerHTML = taskList.length;
         });
+        numTasks--;
+        document.getElementById("numTasks").innerHTML = numTasks;
       }
   })
 });
@@ -31,7 +31,7 @@ function getNewTask(){
 	return {text:fTaskName, dueDate:fDueDate, dueTime:fDueTime};
 }
 
-function addTaskToList(task, numTasks){
+function addTaskToList(task, taskID){
   if (!task.text){
     document.getElementById("warn").style.visibility = "visible";
     return false;
@@ -39,7 +39,7 @@ function addTaskToList(task, numTasks){
   document.getElementById("warn").style.visibility = "hidden";
 
   //newItem represents a new <p> element to be added to document
-  var newItem = "<p class='task' id='task" + numTasks + "'>";
+  var newItem = "<p class='task' id='task" + taskID + "'>";
   newItem += "<b>Task:</b> " + task.text;
   if (task.dueDate){
     newItem += " <b>Due:</b> " + task.dueDate;
