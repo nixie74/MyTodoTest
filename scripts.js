@@ -14,7 +14,7 @@ $(function(){
     taskList.push(newTask);
 
     //newItem represents a new <p> element to be added to document
-    var newItem = "<p id='task" + taskList.length + "'>";
+    var newItem = "<p class='task' id='task" + taskList.length + "'>";
     newItem += "<b>Task:</b> " + newTask.text;
     if (newTask.dueDate){
       newItem += " <b>Due:</b> " + newTask.dueDate;
@@ -22,9 +22,10 @@ $(function(){
         newItem += " at " + newTask.dueTime;
       }
     }
+		newItem += "<span class='deleteButton'>x</span>";
     newItem += "</p>";
 
-    $("#todoList").append(newItem);
+		$(newItem).hide().appendTo("#todoList").fadeIn();
 		document.getElementById("numTasks").innerHTML = taskList.length;
   })
 });
@@ -37,4 +38,8 @@ function getNewTask(){
 	var fDueTime = document.getElementById("taskInput").elements["dueTime"].value;
 
 	return {text:fTaskName, dueDate:fDueDate, dueTime:fDueTime};
+}
+
+function addTaskToList(t){
+
 }

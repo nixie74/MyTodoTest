@@ -6,6 +6,25 @@ p{
 	font-family: sans-serif;
 }
 
+.task{
+	padding: 1em;
+	background-color: #DDD;
+}
+
+.deleteButton{
+	color: #777;
+	float: right;
+	text-align: center;
+	padding: 0.1em;
+	width: 1.2em;
+	height: 1.2em;
+}
+.deleteButton:hover{
+	color: #333;
+	font-weight: bold;
+	background-color: #CCC;
+	cursor: pointer;
+}
 
 #maintitle{
 	text-align: center;
