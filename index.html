@@ -9,28 +9,28 @@
 <body>
   <div id="maintitle"><h1>mytodo</h1></div>
   <hr></hr>
-  
+
   <h3>Add a new task:</h3>
   <form id="taskInput">
   <p><b>Task:</b></p>
   <input type="text" name="task"></input><br></br>
-  <p><b>Due:</b></p> 
+  <p><b>Due:</b></p>
   <input type="date" name="dueDate"></input>
   <input type="time" name="dueTime"></input><br></br>
-  
-  <input type="button" value="Add task" onclick="addNewTask()"></input>
+
+  <input id="addTask" type="button" value="Add task"></input>
   </form>
   <p id="warn">No task specified</p>
-  
+
   <h3>Current tasks:</h3>
-  <p id="taskList"></p>
-  
-  <script type="text/javascript" src="scripts.js"></script>
-  
-  <!-- jquery stuff; not being used yet
+  <div id = "todoList">
+  <p id='taskCount'>Number of tasks: <span id='numTasks'</span>0</p>
+
+  </div>
+
   <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="jqueryCode.js"></script>
-  -->
+  <script type="text/javascript" src="scripts.js"></script>
+
 </body>
 
 </html>
