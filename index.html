@@ -17,6 +17,8 @@
   <p><b>Due:</b></p>
   <input type="date" name="dueDate"></input>
   <input type="time" name="dueTime"></input><br></br>
+  <input type="checkbox" name="chkWeather" value="Weather"></input>
+    <span class="text">Check weather</span><br></br>
 
   <input id="addTask" type="button" value="Add task"></input>
   </form>
@@ -24,7 +26,7 @@
 
   <h3>Current tasks:</h3>
   <div id="todoList">
-  <p id='taskCount'>Tasks remaining: <span id='numTasks'</span>0</p>
+  <span id="taskCount" class="text">Tasks remaining: <span id="numTasks"</span>0</span>
   </div>
 
   <script type="text/javascript" src="jquery-3.1.1.min.js"></script>

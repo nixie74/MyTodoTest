@@ -2,7 +2,7 @@ $(document).ready(function(){
   var taskList = [];
   $("#addTask").click(function(){
 		var newTask = getNewTask();
-    if (addTaskToList(newTask)){
+    if (addTaskToList(newTask, taskList.length)){
       taskList.push(newTask);
     }
 	  document.getElementById("numTasks").innerHTML = taskList.length;
@@ -10,8 +10,9 @@ $(document).ready(function(){
 
   $(document).on("click", ".deleteButton", function(){
       if (confirm("Do you really wish to delete this task?")){
-        var taskIdx = parseInt($(this).parent().attr('id').substring(4));
-        taskList.splice(taskIdx);
+        var parentIDNum = $(this).parent().attr('id').substring(4);
+        var taskIdx = parseInt(parentIDNum);
+        taskList.splice(taskIdx, 1);
         $(this).parent().fadeOut(500, function(){
           $(this).delay(500).remove();
           document.getElementById("numTasks").innerHTML = taskList.length;
