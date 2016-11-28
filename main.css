@@ -7,8 +7,19 @@ p{
 	word-wrap: break-word;
 }
 
-.text{
+.regText{
 	font-family: sans-serif;
+}
+
+.lowkeyText{
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 65%;
+	color: #555;
+}
+
+.lowkeyText a{
+	color: #444;
 }
 
 .task{
@@ -41,6 +52,15 @@ p{
 	padding: 2em;
 	background-color: #E6F5FF;
 	border-bottom: 3px solid #AAD;
+}
+
+input[name="task"]{
+	height: 4em;
+	width: 8em;
+}
+
+input[name="zip"]{
+	width: 5em;
 }
 
 #warn{

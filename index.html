@@ -17,19 +17,25 @@
   <p><b>Due:</b></p>
   <input type="date" name="dueDate"></input>
   <input type="time" name="dueTime"></input><br></br>
-  <input type="checkbox" name="chkWeather" value="Weather"></input>
-    <span class="text">Check weather</span><br></br>
+  <input id="cbWeather" type="checkbox" name="chkWeather" value="true"></input>
+    <span class="regText">Check weather</span><br></br>
+    <span class="regText">Zipcode: </span>
+  <input id="zipInput" type="text" name="zip" readonly="true"></input>
+  <span class="lowkeyText">
+    <a href=https://darksky.net/poweredby/>Powered by Dark Sky</a></span><br></br>
 
   <input id="addTask" type="button" value="Add task"></input>
+
   </form>
   <p id="warn">No task specified</p>
 
   <h3>Current tasks:</h3>
   <div id="todoList">
-  <span id="taskCount" class="text">Tasks remaining: <span id="numTasks"</span>0</span>
+  <span id="taskCount" class="regText">Tasks remaining: <span id="numTasks"</span>0</span>
   </div>
 
   <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="keys.js"></script>
   <script type="text/javascript" src="scripts.js"></script>
 
 </body>
